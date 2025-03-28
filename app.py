@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 
-app = Flask(_name_)
-
+app = Flask(__name__)
 
 @app.route('/')
 def index():
@@ -21,5 +20,5 @@ def greet():
     user_input = request.form['username']
     return f"Hello {user_input}, Welcome to this app for Docker demonstration. Please consider like and subscribe to the channel."
 
-if _name_  == '_main_':
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
